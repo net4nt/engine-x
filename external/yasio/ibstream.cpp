@@ -54,7 +54,7 @@ void ibstream_view::reset(const void* data, size_t size)
   last_         = first_ + size;
 }
 
-template <> int ibstream_view::read_ix<int>()
+template <> int32_t ibstream_view::read_ix<int32_t>()
 {
   // Unlike writing, we can't delegate to the 64-bit read on
   // 64-bit platforms. The reason for this is that we want to
@@ -152,7 +152,7 @@ uint32_t ibstream_view::read_u24()
 
 cxx17::string_view ibstream_view::read_v()
 {
-  int count = read_ix<>();
+  int count = read_ix<int>();
   return read_bytes(count);
 }
 
@@ -179,10 +179,9 @@ void ibstream_view::read_bytes(void* oav, int len)
 
 cxx17::string_view ibstream_view::read_bytes(int len)
 {
-  cxx17::string_view sv;
   if (len > 0)
-    sv = cxx17::string_view(consume(len), len);
-  return sv;
+    return cxx17::string_view(consume(len), len);
+  return cxx17::string_view{};
 }
 
 const char* ibstream_view::consume(size_t size)

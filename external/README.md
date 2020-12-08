@@ -64,7 +64,7 @@
 - Version: 1.12.0
 - License: Apache-2.0
 
-## Freetype
+## FreeType
 - Upstream: https://www.freetype.org/
 - Version: 2.10.4
 - License: BSD-style (The FreeType Project)
@@ -86,7 +86,7 @@
 
 ## jpeg (libjpeg-turbo)
 - Upstream: https://github.com/libjpeg-turbo/libjpeg-turbo
-- Version: git 2.0.5-3e9e7c7 (2052) with CMakeLists.txt modified for sutiable as a thirdparty of CMake build system
+- Version: 2.0.6 with CMakeLists.txt modified for sutiable as a thirdparty of CMake build system
 - License: BSD-style (IJG,BSD-3-Clause,zlib)
 
 ## kcp
@@ -163,7 +163,7 @@
 
 ## pugixml
 - Upstream: https://github.com/zeux/pugixml
-- Version: 1.10
+- Version: 1.11
 - License: MIT
 
 ## rapidjson
